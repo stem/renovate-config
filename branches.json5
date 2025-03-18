@@ -1,0 +1,9 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  // Configure Renovate to look for the default (main|master) branch
+  // and any branch that looks like a version branch (e.g. 1.x, 2.x, etc.)
+  baseBranches: ["$default", "/^(\d+\.)+x$/"],
+
+  // Configure Renovate to create branches with a prefix of "renovate/refactoring/"
+  branchPrefix: "renovate/refactoring/",
+}

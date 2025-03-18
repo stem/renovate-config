@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "github>stem/renovate-config//dashboard.json5",
+    "github>stem/renovate-config//scheduling.json5",
+    "github>stem/renovate-config//branches.json5",
+    "github>stem/renovate-config//commits.json5",
+    "github>stem/renovate-config//pullRequests.json5"
+  ]
+}

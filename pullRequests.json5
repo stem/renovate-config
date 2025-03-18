@@ -1,0 +1,18 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    // Scheduling work
+    ":separateMultipleMajorReleases",
+
+    // Configure PRs' body
+    "security:openssf-scorecard",
+    "mergeConfidence:all-badges",
+  ],
+
+  // Custom PR labels
+  labels: ["milestone:{{#if (or isPatch isPin isPinDigest)}}patch{{else}}{{{updateType}}}{{/if}}"],
+
+  // Assignees and reviewers are randomly picked
+  assigneesFromCodeOwners: true,
+  reviewersFromCodeOwners: true,
+}

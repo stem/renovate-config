@@ -1,0 +1,19 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  // Enforce a default commit message like this:
+  //
+  // ```
+  // Update dependency {{depName}} from {{currentVersion}} to {{newVersion}}
+  //
+  // We just want to keep up with the upgrades.
+  //
+  // Milestone: patch|minor|major
+  // ```
+  //
+  // This way, we can automate the release process while keeping message human
+  // readable.
+  //
+  // BTW, the `Milestone: ...` is called a "trailer" in git terminology and can
+  // be automatically extracted by git.
+  commitBody: "We just want to keep up with the upgrades.\n\nMilestone: {{#if (or isPatch isPin isPinDigest)}}patch{{else}}{{{updateType}}}{{/if}}",
+}
